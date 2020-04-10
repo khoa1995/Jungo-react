@@ -1,0 +1,65 @@
+/*
+*  Global variables.
+*
+*  [Table of contents]
+*
+*  [&. Content / #key]
+*  [Let press Ctrl + f and type of paste the key, then press Enter to search the content]
+*
+*  Summary:
+*
+*  01. Colors
+*  02. Typography
+*  03. Z Index
+*  04. Screen Breakpoint
+*
+*
+*/
+
+/*==================================
+=            01. Colors            =
+==================================*/
+
+$color-black:#000000;
+$color-text-white: #ffffff;
+
+/*=====  End of 01. Colors  ======*/
+
+
+/*======================================
+=            02. Typography            =
+======================================*/
+
+$ff-Roboto: Roboto, sans-serif;
+$line-height: 1.25;
+
+/*=====  End of 02. Typography  ======*/
+
+/*=============================================
+=            04. Screen Breakpoint            =
+=============================================*/
+
+$width-fHD-zoom-125: 1536px; // h: 721px
+$width-fHD-zoom-150: 1280px;
+$width-fHD-zoom-175: 1097px;
+$width-Hi-DPI: 1440px;
+$width-HD: 1366px; // h: 625px
+$width-MD: 1280px;
+$width-iPad: 768px;
+$iPhoneXSMax-landscape: 991px;
+$iPhone8plus-landscape: 767px;
+$iPhone8-landscape: 667px;
+$iPhone5-landscape: 568px;
+$iPhone4-landscape: 480px;
+
+$iPhoneXSMax-portrait: 414px;
+$iPhone8-portrait: 380px;
+$iPhone5-portrait: 320px;
+
+
+$height-HD: 768px;
+$height-fHD-zoom-125-with-bar: 721px;
+$height-HD-with-bar: 625px;
+$height-iPad: 1024px;
+
+/*=====  End of 04. Screen Breakpoint  ======*/

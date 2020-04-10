@@ -1,0 +1,24 @@
+/*
+*  Main.
+*
+*  [Table of contents]
+*
+*  [&. Content / #key]
+*  [Let press Ctrl + f and type of paste the key, then press Enter to search the content]
+*
+*  Summary:
+*
+*  01. Prefix
+*
+*/
+
+@import './stylesheet/base/base';
+/*==================================
+=            01. Prefix            =
+==================================*/
+
+.clickable {
+  cursor: pointer;
+  user-select: none;
+}
+/*=====  End of 01. Prefix  ======*/

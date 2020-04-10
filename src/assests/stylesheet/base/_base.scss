@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'typography';
+
+* {
+  outline: 0 none;
+}
+
+body {
+  font-size: 1rem;
+  line-height: $line-height;
+  min-height: 100vh;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $ff-Roboto;
+  // background-color: $color-black;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+

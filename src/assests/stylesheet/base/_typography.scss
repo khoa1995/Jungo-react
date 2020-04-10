@@ -1,0 +1,50 @@
+/*
+*  Typography.
+*
+*  [Table of contents]
+*
+*  [&. Content / #key]
+*  [Let press Ctrl + f and type of paste the key, then press Enter to search the content]
+*
+*  Summary:
+*
+*  01. Font face
+*  02. Font size
+*
+*/
+
+/*=====================================
+=            01. Font face            =
+=====================================*/
+
+@mixin generateFont($font-family, $font-extend, $fontWeight: 400, $fontStyle: normal) {
+    @font-face {
+      font-family: $font-family;
+      font-style: $fontStyle;
+      font-weight: $fontWeight;
+      src: url('../../fonts/#{$font-family}/#{$font-family}-#{$font-extend}.ttf') format('opentype');
+    }
+  }
+  
+  @include generateFont('Roboto', 'Bold', 700);
+  @include generateFont('Roboto', 'Medium', 500);
+  @include generateFont('Roboto', 'Regular', 400);
+  @include generateFont('Roboto', 'Light', 300);
+  
+  /*=====  End of 01. Font face  ======*/
+  
+  
+  /*=====================================
+  =            02. Font size            =
+  =====================================*/
+  
+  :root {
+    font-size: 16px;
+    @media screen and (max-width: $width-fHD-zoom-125) {
+      font-size: 14px;
+    }
+  }
+  
+  /*=====  End of 02. Font size  ======*/
+  
+  
