@@ -1,4 +1,7 @@
 @import './../../assests/stylesheet/base/variables';
 .menu-wrapper {
     background-color: $color-black;
+    &__text {
+        color: $color-white;
+    }
 }

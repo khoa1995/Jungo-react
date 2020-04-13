@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Navbar, Nav} from 'react-bootstrap';
 import './menu.scss'
 
 class Menu extends Component {
@@ -9,7 +10,14 @@ class Menu extends Component {
     render() { 
         return ( 
             <div className="menu-wrapper">
-                <div>Hello world</div>
+                <Navbar bg="light" variant="light">
+                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                    <Nav className="mr-auto">
+                        <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link href="#features">Features</Nav.Link>
+                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                    </Nav>
+                </Navbar>
             </div>
          );
     }
