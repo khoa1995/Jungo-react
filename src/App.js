@@ -3,10 +3,14 @@ import React from 'react';
 import './App.scss';
 import './assests/main.scss';
 import Menu from './components/Menu/menu';
+import Header from './components/Header/header'
 
 function App() {
   return (
-    <div className="App"><Menu/></div>
+    <div className="App">
+      <Menu/>
+      <Header/>
+    </div>
   );
 }
 
