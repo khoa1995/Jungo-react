@@ -5,17 +5,17 @@ import './header.scss'
 
 function Header(){
     let [weatherData, setWeatherData] = useState('')
-    let [city] = useState('VietNam')
+    let [country] = useState('USA')
 
     useEffect(() => {
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=6c69fc4731444a310cad36bbdfcd957b`)
+        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${country}&appid=6c69fc4731444a310cad36bbdfcd957b`)
         .then(response => {
             return response.json();
         })
         .then(data => {
             setWeatherData(data);
         });
-    },[city]);
+    },[country]);
 
     let name;
     let weatherMain;

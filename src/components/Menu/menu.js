@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Navbar, Nav} from 'react-bootstrap';
+// import { Navbar, Nav} from 'react-bootstrap';
+import Weather from '';
+import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import './menu.scss'
 
 class Menu extends Component {
@@ -8,17 +10,13 @@ class Menu extends Component {
         this.state = {  }
     }
     render() { 
-        return ( 
-            <div className="menu-wrapper">
-                <Navbar bg="light" variant="light">
-                    <Navbar.Brand href="#home">Weather</Navbar.Brand>
-                    <Nav className="ml-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
-                    </Nav>
-                </Navbar>
-            </div>
+        return (
+            <Router>
+                <ul>
+
+                </ul>
+            </Router> 
+
          );
     }
 }

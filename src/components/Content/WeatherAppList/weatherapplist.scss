@@ -1,0 +1,9 @@
+.weather-container {
+    &__list {
+        display: flex;
+        padding-top: 5rem;
+        li {
+            margin: auto;
+        }
+    }
+}

@@ -2,14 +2,14 @@ import React from 'react';
 // import "~bootstrap/scss/bootstrap";
 import './App.scss';
 import './assests/main.scss';
-import Menu from './components/Menu/menu';
-import Header from './components/Header/header'
+import Navigation from './views/Navigation';
+import Main from './views/Main';
 
 function App() {
   return (
     <div className="App">
-      <Menu/>
-      <Header/>
+      <Navigation/>
+      <Main/>
     </div>
   );
 }
