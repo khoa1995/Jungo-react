@@ -1,0 +1,42 @@
+@import '~assests/stylesheet/base/variables';
+.burger-container {
+    height: 500px;
+    width: 500px;
+    margin: auto;
+}
+.bread {
+    &-bottom {
+        height: 13%;
+        width: 80%;
+        background: linear-gradient($color-orange, $color-orange-bold);
+        border-radius: 0 0 30px 30px;
+        box-shadow: inset -15px 0 $color-orange-bold;
+        margin: 2% auto;
+    }
+    &-top {
+        height: 20%;
+        width: 80%;
+        background: linear-gradient($color-orange, $color-orange-bold);
+        border-radius: 0 0 30px 30px;
+        box-shadow: inset -15px 0 $color-orange-bold;
+    }
+}
+.meat {
+    width: 80%;
+    height: 8%;
+    background: linear-gradient($color-red, $color-red-bold);
+    margin: 2% auto;
+    border-radius: 15px;
+}
+.cheese {
+    width: 90%;
+    height: 4.5%;
+    margin: 2% auto;
+    background: linear-gradient($color-yellow, $color-yellow-bold);
+    border-radius: 20px;
+}
+.salad {
+    width: 85%;
+    height: 3%;
+    background: linear-gradient($color-green, $color-green-light);
+}

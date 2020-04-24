@@ -1,12 +1,14 @@
-import React from 'react';
-import BurgerView from '../components/Content/BurgerBuilder/buger-container';
+import React, { Component } from 'react';
+import BurgerView from 'components/Content/BurgerBuilder/BurgerContainer';
 
-function Burger() {
-  return (
-    <div className="burger">
-      <BurgerView/>
-    </div>
-  );
+class Burger extends Component {
+  render() {
+    return (
+      <div>
+        <BurgerView/>
+      </div>
+    );
+  }
 }
 
 export default Burger;
