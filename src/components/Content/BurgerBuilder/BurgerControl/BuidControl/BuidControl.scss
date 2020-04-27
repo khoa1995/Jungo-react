@@ -1,0 +1,30 @@
+@import '~assests/stylesheet/base/variables';
+.buid-controller {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
+    .btn {
+        display: block;
+        font: inherit;
+        padding: 5px;
+        margin: 0 5px;
+        width: 80px;
+        border: 1px solid $color-orange-bold;
+        cursor: pointer;
+        outline: none;
+    }
+    &__label {
+        padding: 10px;
+        font-weight: bold;
+        width: 80px;
+    }
+    &__less {
+        background-color: $color-orange;
+        color: $color-white;
+    }
+    &__more {
+        background-color: $color-orange-bold;
+        color: $color-white;
+    }
+}
