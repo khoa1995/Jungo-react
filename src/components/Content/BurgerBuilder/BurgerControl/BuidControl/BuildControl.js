@@ -4,12 +4,12 @@ import './BuidControl.scss'
 
 const BuildControl = (props) => {
     return (
-        <div className="buid-controller">
-            <div className="buid-controller__label">{props.label}</div>
-            <div className="btn buid-controller__less">Less</div>
-            <div className="btn buid-controller__more"
+        <div className="build-controller">
+            <div className="build-controller__label">{props.label}</div>
+            <button className={`build-controller__less ${props.disabled? 'disabled':''}`} onClick={props.remove} disabled={props.disabled}>Less</button>
+            <button className="build-controller__more"
                 //tạo event click lấy prop add từ comp cha là burger control 
-                onClick={props.add}>More</div>            
+                onClick={props.add}>More</button>            
         </div>
     );
 };

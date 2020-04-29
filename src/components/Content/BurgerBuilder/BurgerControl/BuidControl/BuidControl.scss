@@ -1,18 +1,23 @@
 @import '~assests/stylesheet/base/variables';
-.buid-controller {
+.build-controller {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 5px auto;
-    .btn {
+    button {
         display: block;
         font: inherit;
         padding: 5px;
         margin: 0 5px;
         width: 80px;
         border: 1px solid $color-orange-bold;
-        cursor: pointer;
         outline: none;
+        &.disabled {
+            cursor: not-allowed;
+            border: 1px solid adjust-color($color-black, $lightness: 10%);
+            color: $color-black;
+            background-color: $color-white;
+        }
     }
     &__label {
         padding: 10px;
