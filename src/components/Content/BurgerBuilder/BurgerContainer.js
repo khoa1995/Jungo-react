@@ -31,10 +31,5 @@ const BurgerContainer = (props) => {
 };
 
 
-BurgerContainer.propTypes = {
-
-};
-
-
 export default BurgerContainer;
 
