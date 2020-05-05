@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../node_modules/pattern.css'
 import BurgerView from 'components/Content/BurgerBuilder/BurgerContainer';
 import BurgerControl from 'components/Content/BurgerBuilder/BurgerControl/BurgerControl';
 
@@ -77,7 +76,7 @@ class Burger extends Component {
       disableInfo[key]= disableInfo[key] <= 0
     }
     return (
-      <div className="container">
+      <div className="container text-dark pt-5">
         <div className="row">
           <div className="col-5">
             <BurgerControl 
