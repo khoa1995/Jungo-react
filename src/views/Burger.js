@@ -15,7 +15,8 @@ class Burger extends Component {
       salad: 0,
       meat: 0,
     },
-    totalPrice: 3
+    totalPrice: 3,
+    orderNow: false, 
   }
   //function add ingredients with type received
   addIngredientHandler = (type) => {
@@ -53,6 +54,19 @@ class Burger extends Component {
         this.setState({totalPrice: newPrice, ingredients: updatedIngredients})
         }
   }
+  // //function order now
+  // orderBurgerHandler () {
+  //   const ingredients = {...this.state.ingredients}
+  //   // get value = name of ingredients, ex: salad, cheese,...
+  //   const sum = Object.keys(ingredients)
+  //     .map(igkey => {
+  //       return ingredients[igkey]
+  //     })
+  //     .reduce((sum,el) => {
+  //       return sum + el
+  //     },0)
+  //   this.setState({orderBurgerHandler: sum > 0})
+  // }
   render() {
     const disableInfo = {
       ...this.state.ingredients
