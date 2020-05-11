@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import { Switch, Route } from 'react-router-dom';
 // import Weather from './Weather';
 import Burger from './Burger';
+import logo from '../assests/image/logo_burger.png'
 
 class Main extends Component {
     render() {
@@ -10,7 +11,12 @@ class Main extends Component {
             //     <Route exact path='/' component={Weather}></Route>
             //     <Route exact path='/burger' component={Burger}></Route>
             // </Switch>
-            <Burger/>
+            <div className="main">
+                <div className="burger-logo">
+                    <img alt="logo" src={logo}/>
+                </div>
+                <Burger/>
+            </div>
         );
     }
 }

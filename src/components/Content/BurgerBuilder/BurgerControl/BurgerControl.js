@@ -10,7 +10,7 @@ const controls = [
 
 const BurgerControl = (props) => {
     return (
-        <div className="burger-control container">
+        <div className="burger-control">
         <p className="text-center">Price of burger: {props.price}$</p>
         {controls.map(ctrl => (
             <BuildControl 
@@ -22,7 +22,7 @@ const BurgerControl = (props) => {
                 remove={()=>props.ingredientRemove(ctrl.type)}
                 disabled={props.disabled[ctrl.type]}/>
         ))}
-        <button className="btn btn-danger mt-3">Order Now</button>
+        <button className={`btn btn-danger btn-order mt-3 ${!props.purchasable? 'disabled':''}`} disabled={!props.purchasable}>Order Now</button>
         </div>
     );
 };

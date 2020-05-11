@@ -1,1 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
+@import '~assests/stylesheet/base/variables';
+.bg-burger {
+    background-color: $color-bg-burger;
+    padding: 60px 
+}
+.burger-logo {
+    display: flex;
+    justify-content: center;
+}

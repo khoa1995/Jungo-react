@@ -13,7 +13,6 @@
         border: 1px solid $color-orange-bold;
         outline: none;
         &.disabled {
-            cursor: not-allowed;
             border: 1px solid adjust-color($color-black, $lightness: 10%);
             color: $color-black;
             background-color: $color-white;
@@ -34,6 +33,13 @@
     }
 }
 .burger-control {
-    display: grid;
-    justify-content: center;
+    background-color: $color-white;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+    width: 447px;
+    .btn-order {
+        width: 100%;
+        border-radius: 50px;
+    }
 }

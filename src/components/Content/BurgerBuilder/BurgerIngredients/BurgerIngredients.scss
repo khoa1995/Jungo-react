@@ -1,24 +1,32 @@
 @import '~assests/stylesheet/base/variables';
 .burger-container {
-    height: 250px;
-    width: 500px;
+    height: 139px;
+    width: 350px;
+    margin: 5rem auto;
 }
 .bread {
     &-bottom {
-        height: 13%;
-        width: 80%;
-        background: linear-gradient($color-orange, $color-orange-bold);
-        border-radius: 0 0 30px 30px;
-        box-shadow: inset -15px 0 $color-orange-bold;
-        margin: 2% auto;
+        height: 100%;
+        width: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(../../../../assests/image/bread-bottom.png);
+        // background: linear-gradient($color-orange, $color-orange-bold);
+        // border-radius: 0 0 30px 30px;
+        // box-shadow: inset -15px 0 $color-orange-bold;
+        // margin: 2% auto;
     }
     &-top {
-        height: 20%;
-        width: 80%;
-        background: linear-gradient($color-orange, $color-orange-bold);
-        border-radius: 30px 30px 0 0;
-        box-shadow: inset -15px 0 $color-orange-bold;
-        margin: auto;
+        height: 100%;
+        width: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(../../../../assests/image/bread-top.png);
+
+        // background: linear-gradient($color-orange, $color-orange-bold);
+        // border-radius: 30px 30px 0 0;
+        // box-shadow: inset -15px 0 $color-orange-bold;
+        // margin: auto;
     }
 }
 .meat {

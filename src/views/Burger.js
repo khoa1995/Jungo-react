@@ -17,6 +17,19 @@ class Burger extends Component {
     totalPrice: 3,
     orderNow: false, 
   }
+    //function order now
+    orderBurgerHandler (ingredients) {
+      // const ingredients = {...this.state.ingredients}
+      // get value = name of ingredients, ex: salad, cheese,...
+      const sum = Object.keys(ingredients)
+        .map(igkey => {
+          return ingredients[igkey]
+        })
+        .reduce((sum,el) => {
+          return sum + el
+        },0)
+      this.setState({orderNow: sum > 0})
+    }
   //function add ingredients with type received
   addIngredientHandler = (type) => {
     //get old number of type
@@ -29,10 +42,11 @@ class Burger extends Component {
     }
     // update new number in new ingredient
     updatedIngredients[type] = updatedCount
+    this.orderBurgerHandler(updatedIngredients)
     const priceAdd = ingredients_prices[type]
     const oldPrice = this.state.totalPrice;
     const newPrice = oldPrice + priceAdd;
-    this.setState({totalPrice: newPrice, ingredients: updatedIngredients})
+    this.setState({totalPrice: newPrice, ingredients: updatedIngredients});
   }
   //function remove ingredients with type received
   removeIngredientHandler = (type) => {
@@ -51,21 +65,9 @@ class Burger extends Component {
         const oldPrice = this.state.totalPrice;
         const newPrice = oldPrice - priceRemove;
         this.setState({totalPrice: newPrice, ingredients: updatedIngredients})
+        this.orderBurgerHandler(updatedIngredients)
         }
   }
-  // //function order now
-  // orderBurgerHandler () {
-  //   const ingredients = {...this.state.ingredients}
-  //   // get value = name of ingredients, ex: salad, cheese,...
-  //   const sum = Object.keys(ingredients)
-  //     .map(igkey => {
-  //       return ingredients[igkey]
-  //     })
-  //     .reduce((sum,el) => {
-  //       return sum + el
-  //     },0)
-  //   this.setState({orderBurgerHandler: sum > 0})
-  // }
   render() {
     const disableInfo = {
       ...this.state.ingredients
@@ -78,17 +80,18 @@ class Burger extends Component {
     return (
       <div className="container text-dark pt-5">
         <div className="row">
-          <div className="col-5">
-            <BurgerControl 
-                ingredientAdd ={this.addIngredientHandler} 
-                ingredientRemove ={this.removeIngredientHandler}
-                price = {this.state.totalPrice}
-                disabled = {disableInfo}>
-            </BurgerControl>
+          <div className="col-6">
+            <BurgerView ingredients={this.state.ingredients}/>
           </div>
 
           <div className="col">
-            <BurgerView ingredients={this.state.ingredients}/>
+            <BurgerControl 
+            ingredientAdd ={this.addIngredientHandler} 
+            ingredientRemove ={this.removeIngredientHandler}
+            price = {this.state.totalPrice}
+            purchasable= {this.state.orderNow}
+            disabled = {disableInfo}>
+            </BurgerControl>
           </div>
         </div>
       </div>
