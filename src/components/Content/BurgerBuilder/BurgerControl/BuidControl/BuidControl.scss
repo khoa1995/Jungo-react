@@ -1,45 +1,45 @@
 @import '~assests/stylesheet/base/variables';
 .build-controller {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px auto;
+    margin: 2rem auto;
+    &__btn {
+        margin-left: auto;
+        display: flex;
+    }
     button {
         display: block;
         font: inherit;
-        padding: 5px;
+        padding: 5px 10px;
         margin: 0 5px;
-        width: 80px;
-        border: 1px solid $color-orange-bold;
-        outline: none;
+        border-radius: 50%;
+        border-color: $color-button;
+        font-size: 1.5rem;
+        font-weight: bolder;
         &.disabled {
-            border: 1px solid adjust-color($color-black, $lightness: 10%);
-            color: $color-black;
+            border: 1px solid adjust-color($color-button, $lightness: 10%);
+            color: $color-button;
             background-color: $color-white;
+        }
+        &:focus {
+            outline: none;
         }
     }
     &__label {
         padding: 10px;
-        font-weight: bold;
+        font-weight: 450;
         width: 80px;
     }
     &__less {
-        background-color: $color-orange;
-        color: $color-white;
+        background-color: $color-white;
+        color: $color-button;
     }
     &__more {
-        background-color: $color-orange-bold;
+        background-color: $color-button;
         color: $color-white;
     }
-}
-.burger-control {
-    background-color: $color-white;
-    padding: 2rem;
-    border-radius: 30px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
-    width: 447px;
-    .btn-order {
-        width: 100%;
-        border-radius: 50px;
+    &__price {
+        color: adjust-color($color: $color-black, $alpha: -0.5);
+        padding: 0 1rem;
+        font-style: italic;
     }
 }

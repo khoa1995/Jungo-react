@@ -6,7 +6,7 @@ import Main from './views/Main';
 
 function App() {
   return (
-    <div className="App bg-burger vh-100">     
+    <div className="App bg-burger">     
       <Main/>
     </div>
   );

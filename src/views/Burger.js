@@ -78,7 +78,7 @@ class Burger extends Component {
       disableInfo[key]= disableInfo[key] <= 0
     }
     return (
-      <div className="container text-dark pt-5">
+      <div className="container text-dark padding-5">
         <div className="row">
           <div className="col-6">
             <BurgerView ingredients={this.state.ingredients}/>
@@ -88,6 +88,7 @@ class Burger extends Component {
             <BurgerControl 
             ingredientAdd ={this.addIngredientHandler} 
             ingredientRemove ={this.removeIngredientHandler}
+            ingredients = {this.state.ingredients}
             price = {this.state.totalPrice}
             purchasable= {this.state.orderNow}
             disabled = {disableInfo}>

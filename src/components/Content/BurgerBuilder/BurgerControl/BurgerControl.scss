@@ -1,0 +1,92 @@
+@import '~assests/stylesheet/base/variables';
+.burger-control {
+    background-color: $color-white;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+    width: 447px;
+    .btn-order {
+        width: 100%;
+        border-radius: 50px;
+    }
+    &__title {
+        font-family: $ff-Pacifico;
+        font-size: 35px;
+        text-align: center;
+        color: $color-button;
+    }
+    &__total {
+        font-weight: 700;
+        font-size: 1.5rem;
+        padding: 0 .5rem;
+        position: relative;
+        span {
+            position: absolute;
+            right: 7%;
+        }
+    }
+    // &__checkout {
+    //     border: 1px solid adjust-color($color-black, $lightness: 5%);
+    //     border-radius: 10px;
+    //     margin-bottom: 1.5rem;
+    //     &-list {
+    //         img {
+    //             width: auto;
+    //             height: 2rem;
+    //         }           
+    //     }
+    //     &-title {
+    //         font-size: 1.25rem;
+    //         font-weight: 500;
+    //         color: $color-red
+    //     }
+    // }
+    &__ctrl {
+        display: flex;
+        margin: 2rem auto;
+        &-button {
+            margin-left: auto;
+            display: flex;
+            &-less {
+                background-color: $color-white;
+                color: $color-button;
+            }
+            &-plus {
+                background-color: $color-button;
+                color: $color-white;
+            }
+        }
+        &-label {
+            padding: 10px;
+            font-weight: 450;
+            width: 80px;
+        }       
+        &-price {
+            color: adjust-color($color: $color-black, $alpha: -0.5);
+            padding: 0 1rem;
+            font-style: italic;
+        }
+        img {
+            width: auto;
+            height: 2rem;
+        }  
+        button {
+            display: block;
+            font: inherit;
+            padding: 0 12px;
+            margin: 0 5px;
+            border-radius: 50%;
+            border-color: $color-button;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            &.disabled {
+                border: 1px solid adjust-color($color-button, $lightness: 10%);
+                color: $color-button;
+                background-color: $color-white;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

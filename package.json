@@ -1,7 +1,7 @@
 {
   "name": "app",
   "version": "0.1.0",
-  "homepage":".",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@babel/core": "7.9.0",
@@ -53,6 +53,7 @@
     "react-bootstrap": "^1.0.0",
     "react-dev-utils": "^10.2.1",
     "react-dom": "^16.13.1",
+    "react-phone-number-input": "^3.0.22",
     "react-router-dom": "^5.1.2",
     "resolve": "1.15.0",
     "resolve-url-loader": "3.1.1",
